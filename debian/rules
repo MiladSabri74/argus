@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+# Debian makefile for yara-downloader
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	go build -o yara-downloader .
+
+override_dh_auto_install:
+	dh_auto_install --destdir=$(CURDIR)/debian/yara-downloader
+	install -D -m 755 yara-downloader $(CURDIR)/debian/yara-downloader/usr/bin/yara-downloader
+	install -D -m 644 config/yara-downloader.ini $(CURDIR)/debian/yara-downloader/etc/yara-downloader/yara-downloader.ini
+	mkdir -p $(CURDIR)/debian/yara-downloader/etc/yara-downloader/conf.d
+	install -D -m 644 config/conf.d/01-example.ini $(CURDIR)/debian/yara-downloader/etc/yara-downloader/conf.d/01-example.ini
+
+override_dh_auto_clean:
+	rm -f yara-downloader

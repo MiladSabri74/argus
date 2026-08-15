@@ -1,0 +1,10 @@
+yara-downloader (1.0.0) unstable; urgency=medium
+
+  * Initial release of yara-downloader
+  - Downloads latest YARA Forge rules from GitHub
+  - Creates date-tagged folders for each release
+  - Extracts only .yar files from packages
+  - Supports INI-based configuration with conf.d overrides
+  - Command-line argument -c for custom config directory
+
+ -- Your Name <your.email@example.com>  Mon, 01 Jan 2024 00:00:00 +0000

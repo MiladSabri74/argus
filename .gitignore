@@ -1,16 +1,26 @@
 ```
-# Compiled and build artifacts
+# Build artifacts
+yara-downloader
+dist/
+build/
 *.o
 *.obj
 *.out
-yara-downloader
 
 # Dependencies
 vendor/
+*.mod
+*.sum
 
 # Logs and temp files
 *.log
 *.tmp
+
+# Debian packaging
+debian/*.debhelper/
+debian/*-stamp
+debian/files
+debian/substvars
 
 # Environment
 .env
@@ -20,55 +30,15 @@ vendor/
 # Editors
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Coverage reports
+# Coverage
 coverage/
 htmlcov/
 .coverage
 
-# Distribution artifacts
-dist/
-build/
-target/
-
-# Python specific
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-
-# Go specific
-*.a
-*.o
-*.obj
-*.out
-*.test
-*.prof
-cover.out
-
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
+# OS
+.DS_Store
+Thumbs.db
 ```

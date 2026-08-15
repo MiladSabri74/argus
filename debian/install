@@ -1,0 +1,3 @@
+yara-downloader/usr/bin/yara-downloader
+etc/yara-downloader/
+etc/yara-downloader/conf.d/
