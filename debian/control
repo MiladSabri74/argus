@@ -1,0 +1,16 @@
+Source: argus
+Section: utils
+Priority: optional
+Maintainer: Milad Sabri <milad.sabri74@gmail.com>
+Build-Depends: debhelper (>= 10), golang-go
+Standards-Version: 4.5.0
+
+Package: argus
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: CLI tool to download YARA Forge rules
+ argus is a command-line tool that downloads the latest
+ YARA Forge rules from GitHub, creates date-tagged folders,
+ extracts only .yar files, and manages updates by checking existing
+ downloads. It supports INI-based configuration with conf.d override
+ support.

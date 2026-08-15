@@ -1,0 +1,10 @@
+argus (1.0.0) unstable; urgency=medium
+
+  * Initial release of argus
+  - Downloads latest YARA Forge rules from GitHub
+  - Creates date-tagged folders for each release
+  - Extracts only .yar files from packages
+  - Supports INI-based configuration with conf.d overrides
+  - Command-line argument -c for custom config directory
+
+ -- Milad Sabri <milad.sabri74@gmail.com>  Mon, 01 Jan 2024 00:00:00 +0000

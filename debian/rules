@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+# Debian makefile for argus
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	go build -o argus ./src
+
+override_dh_auto_install:
+	dh_auto_install --destdir=$(CURDIR)/debian/argus
+	install -D -m 755 argus $(CURDIR)/debian/argus/usr/bin/argus
+	install -D -m 644 src/config/argus.ini $(CURDIR)/debian/argus/etc/argus/argus.ini
+	mkdir -p $(CURDIR)/debian/argus/etc/argus/conf.d
+	install -D -m 644 src/config/conf.d/01-example.ini $(CURDIR)/debian/argus/etc/argus/conf.d/01-example.ini
+
+override_dh_auto_clean:
+	rm -f argus
