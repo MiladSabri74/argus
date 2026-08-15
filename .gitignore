@@ -71,4 +71,8 @@ cover.out
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+# Yara Rules
+*.yar
+*.yara
 ```
