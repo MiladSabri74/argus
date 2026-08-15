@@ -1,44 +1,42 @@
 ```
-# Build artifacts
-yara-downloader
-dist/
-build/
-*.o
-*.obj
+# Go-specific ignores
+*.exe
+*.dll
+*.so
+*.dylib
 *.out
+*.test
+*.prof
+cover.out
+coverage.txt
 
 # Dependencies
 vendor/
-*.mod
-*.sum
 
-# Logs and temp files
+# Logs and temporary files
 *.log
 *.tmp
+*.temp
+*.out
 
-# Debian packaging
-debian/*.debhelper/
-debian/*-stamp
-debian/files
-debian/substvars
-
-# Environment
+# Environment files
 .env
 .env.local
 *.env.*
 
-# Editors
+# Editor/IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Coverage
-coverage/
-htmlcov/
-.coverage
+# Build artifacts
+bin/
+dist/
+build/
+target/
 
-# OS
-.DS_Store
-Thumbs.db
+# Cache directories
+.cache/
+.gocache/
 ```

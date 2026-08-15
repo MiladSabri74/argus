@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"gopkg.in/ini.v1"
-	"yara-downloader/pkg/downloader"
+	"argus/pkg/downloader"
 )
 
 // Manager handles loading and saving configuration

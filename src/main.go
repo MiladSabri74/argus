@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"yara-downloader/pkg/config"
-	"yara-downloader/pkg/downloader"
+	"argus/pkg/config"
+	"argus/pkg/downloader"
 )
 
 func main() {

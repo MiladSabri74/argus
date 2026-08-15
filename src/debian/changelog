@@ -1,6 +1,6 @@
-yara-downloader (1.0.0) unstable; urgency=medium
+argus (1.0.0) unstable; urgency=medium
 
-  * Initial release of yara-downloader
+  * Initial release of argus
   - Downloads latest YARA Forge rules from GitHub
   - Creates date-tagged folders for each release
   - Extracts only .yar files from packages
