@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"gopkg.in/ini.v1"
-	"argus/pkg/downloader"
+	"argus/src/pkg/downloader"
 )
 
 // Manager handles loading and saving configuration

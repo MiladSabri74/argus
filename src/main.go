@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"argus/pkg/config"
-	"argus/pkg/downloader"
+	"argus/src/pkg/config"
+	"argus/src/pkg/downloader"
 )
 
 func main() {

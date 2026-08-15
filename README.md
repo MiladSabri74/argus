@@ -17,12 +17,12 @@ A Go-based CLI application that downloads the latest YARA Forge rules from GitHu
 ```
 argus/
 ├── src/
-│   └── main.go                 # Main entry point
-├── pkg/
-│   ├── config/            # Configuration management (INI-based)
-│   │   └── config.go
-│   └── downloader/        # GitHub downloader interface & implementation
-│       └── github_downloader.go
+│   ├── main.go                 # Main entry point
+│   └── pkg/
+│       ├── config/            # Configuration management (INI-based)
+│       │   └── config.go
+│       └── downloader/        # GitHub downloader interface & implementation
+│           └── github_downloader.go
 ├── config/                # Configuration directory
 │   ├── argus.ini    # Main configuration file
 │   └── conf.d/            # Override configuration files
@@ -131,8 +131,8 @@ folder = /opt/yara-rules
 
 The project follows a clean architecture with separation of concerns:
 
-- **pkg/downloader**: Contains the `Downloader` interface and `GitHubDownloader` implementation
-- **pkg/config**: Handles INI-based configuration loading with conf.d support
+- **src/pkg/downloader**: Contains the `Downloader` interface and `GitHubDownloader` implementation
+- **src/pkg/config**: Handles INI-based configuration loading with conf.d support
 - **src/main.go**: Application entry point and orchestration
 - **debian/**: Debian packaging files for creating .deb packages
 

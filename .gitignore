@@ -1,46 +1,111 @@
 ```
-# Build artifacts
-argus
-dist/
-build/
-target/
+# Compiled and build artifacts
+*.o
+*.obj
+*.out
 
 # Dependencies
 vendor/
-node_modules/
-*.mod
-*.sum
 
-# Logs
+# Logs and temp files
 *.log
+*.tmp
 
-# Debian packaging
-debian/*.debhelper/
-debian/files
-debian/substvars
-*.deb
-*.changes
-*.buildinfo
+# Editors
+.vscode/
+.idea/
 
-# YARA rules (if they are generated)
-yara-rules/
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
 
-# Go build cache
-*.a
-*.o
+# Environment
+.env
+.env.local
+.env.*
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+.eggs/
+
+# Go specific
+*.exe
+*.dll
 *.so
 *.dylib
-*.dll
+*.test
+*.prof
+cover.out
 
-# Temporary files
-*.tmp
-*.temp
+# Build directories
+dist/
+build/
+target/
+bin/
+_gen/
+
+# Package management
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE specific
+*.swp
+*.swo
 *~
 .DS_Store
 Thumbs.db
 
-# Configuration backups
-*~
-*.bak
-*.backup
+# Compression archives
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# Testing
+*.pytest_cache/
+.mypy_cache/
+.tox/
+.nox/
+
+# Gradle
+.gradle/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Documentation builds
+_site/
+_sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 ```
