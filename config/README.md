@@ -1,15 +1,15 @@
-# YARA Downloader - INI Configuration Example
+# Argus - INI Configuration Example
 
-This directory contains the configuration files for yara-downloader.
+This directory contains the configuration files for argus.
 
 ## Structure
 
-- `yara-downloader.ini` - Main configuration file
+- `argus.ini` - Main configuration file
 - `conf.d/` - Directory for override configuration files
 
 ## Main Configuration File
 
-The main configuration file (`yara-downloader.ini`) contains:
+The main configuration file (`argus.ini`) contains:
 
 ### [github] Section
 - `repo_owner` - GitHub repository owner (default: YARAHQ)
@@ -44,8 +44,8 @@ folder = /opt/yara-rules
 Use the `-c` flag to specify a custom config directory:
 
 ```bash
-./yara-downloader -c /etc/yara-downloader
-./yara-downloader -c ./config
+./argus -c /etc/argus
+./argus -c ./config
 ```
 
 If no `-c` flag is provided, the application uses `./config` as the default.

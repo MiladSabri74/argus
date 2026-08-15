@@ -1,4 +1,4 @@
-# YARA Downloader
+# Argus
 
 A Go-based CLI application that downloads the latest YARA Forge rules from GitHub, creates a date-tagged folder, extracts only .yar files, and manages updates by checking existing downloads.
 
@@ -15,15 +15,16 @@ A Go-based CLI application that downloads the latest YARA Forge rules from GitHu
 ## Project Structure
 
 ```
-yara-downloader/
-├── main.go                 # Main entry point
+argus/
+├── src/
+│   └── main.go                 # Main entry point
 ├── pkg/
 │   ├── config/            # Configuration management (INI-based)
 │   │   └── config.go
 │   └── downloader/        # GitHub downloader interface & implementation
 │       └── github_downloader.go
 ├── config/                # Configuration directory
-│   ├── yara-downloader.ini    # Main configuration file
+│   ├── argus.ini    # Main configuration file
 │   └── conf.d/            # Override configuration files
 ├── debian/                # Debian packaging files
 │   ├── rules
@@ -39,7 +40,7 @@ yara-downloader/
 ### Build from Source
 
 ```bash
-go build -o yara-downloader .
+go build -o argus ./src
 ```
 
 ### Install Debian Package
@@ -49,7 +50,7 @@ go build -o yara-downloader .
 dpkg-buildpackage -us -uc
 
 # Install the generated package
-sudo dpkg -i ../yara-downloader_1.0.0_amd64.deb
+sudo dpkg -i ../argus_1.0.0_amd64.deb
 ```
 
 ## Usage
@@ -59,11 +60,11 @@ sudo dpkg -i ../yara-downloader_1.0.0_amd64.deb
 Run the downloader with default settings:
 
 ```bash
-./yara-downloader
+./argus
 ```
 
 This will:
-1. Load configuration from `./config/yara-downloader.ini` (or use defaults)
+1. Load configuration from `./config/argus.ini` (or use defaults)
 2. Check for the latest release from YARAHQ/yara-forge
 3. Create a folder with the release date (e.g., `yara-rules/2024-08-15`)
 4. Download and extract only `.yar` files to that folder
@@ -74,8 +75,8 @@ This will:
 Use the `-c` flag to specify a custom configuration directory:
 
 ```bash
-./yara-downloader -c /etc/yara-downloader
-./yara-downloader -c ./config
+./argus -c /etc/argus
+./argus -c ./config
 ```
 
 ### Configuration
@@ -84,7 +85,7 @@ The application uses INI-based configuration with support for override files.
 
 #### Main Configuration File
 
-Create a `config/yara-downloader.ini` file:
+Create a `config/argus.ini` file:
 
 ```ini
 [github]
@@ -132,7 +133,7 @@ The project follows a clean architecture with separation of concerns:
 
 - **pkg/downloader**: Contains the `Downloader` interface and `GitHubDownloader` implementation
 - **pkg/config**: Handles INI-based configuration loading with conf.d support
-- **main.go**: Application entry point and orchestration
+- **src/main.go**: Application entry point and orchestration
 - **debian/**: Debian packaging files for creating .deb packages
 
 ## Building Debian Package

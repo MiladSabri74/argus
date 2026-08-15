@@ -7,4 +7,4 @@ argus (1.0.0) unstable; urgency=medium
   - Supports INI-based configuration with conf.d overrides
   - Command-line argument -c for custom config directory
 
- -- Your Name <your.email@example.com>  Mon, 01 Jan 2024 00:00:00 +0000
+ -- Milad Sabri <milad.sabri74@gmail.com>  Mon, 01 Jan 2024 00:00:00 +0000

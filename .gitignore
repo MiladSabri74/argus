@@ -1,42 +1,46 @@
 ```
-# Go-specific ignores
-*.exe
-*.dll
-*.so
-*.dylib
-*.out
-*.test
-*.prof
-cover.out
-coverage.txt
-
-# Dependencies
-vendor/
-
-# Logs and temporary files
-*.log
-*.tmp
-*.temp
-*.out
-
-# Environment files
-.env
-.env.local
-*.env.*
-
-# Editor/IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
 # Build artifacts
-bin/
+argus
 dist/
 build/
 target/
 
-# Cache directories
-.cache/
-.gocache/
+# Dependencies
+vendor/
+node_modules/
+*.mod
+*.sum
+
+# Logs
+*.log
+
+# Debian packaging
+debian/*.debhelper/
+debian/files
+debian/substvars
+*.deb
+*.changes
+*.buildinfo
+
+# YARA rules (if they are generated)
+yara-rules/
+
+# Go build cache
+*.a
+*.o
+*.so
+*.dylib
+*.dll
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# Configuration backups
+*~
+*.bak
+*.backup
 ```

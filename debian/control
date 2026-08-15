@@ -1,7 +1,7 @@
 Source: argus
 Section: utils
 Priority: optional
-Maintainer: Your Name <your.email@example.com>
+Maintainer: Milad Sabri <milad.sabri74@gmail.com>
 Build-Depends: debhelper (>= 10), golang-go
 Standards-Version: 4.5.0
 
